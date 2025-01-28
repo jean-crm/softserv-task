@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
+import java.util.Set;
 
 /*
 Test task:
@@ -25,7 +26,7 @@ public class RemovingDuplicates {
     public static String removeDuplicates(String str) {
         if (str == null || str.length() == 0) return EMPTY_VALUE;
 
-        LinkedHashSet<Character> set = new LinkedHashSet<>();
+        Set<Character> set = new LinkedHashSet<>();
         StringBuilder result = new StringBuilder();
         str.chars().forEach(c -> {
             if (set.add((char)c)) {
