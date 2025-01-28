@@ -15,11 +15,16 @@ Please publish your code on GitHub and send us a link.
 
  */
 public class RemovingDuplicates {
+
+    public static final String EMPTY_VALUE = "";
+
     public static void main(String[] args) {
         System.out.println(removeDuplicates("AABBCCD112233"));
     }
 
     public static String removeDuplicates(String str) {
+        if (str == null || str.length() == 0) return EMPTY_VALUE;
+
         LinkedHashSet<Character> set = new LinkedHashSet<>();
         StringBuilder result = new StringBuilder();
         str.chars().forEach(c -> {
